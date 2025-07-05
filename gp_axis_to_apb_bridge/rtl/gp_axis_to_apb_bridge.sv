@@ -23,28 +23,28 @@ module gp_axis_to_apb_bridge #(
     parameter AXI_DATA_WIDTH = 32,
     parameter AXI_USER_WIDTH = APB_ADDR_WIDTH+1
 )(
-// System channel
-input  wire                        clk_i        ,
-input  wire                        rst_n_i      ,
-// AXI-Stream BWD interface
-output wire [AXI_DATA_WIDTH-1 : 0] bwd_tdata_o  ,
-output wire                        bwd_tvalid_o ,
-input  wire                        bwd_tready_i ,
-output wire                        bwd_tuser_o  ,
-// AXI-Stream FWD interface
-input  wire [AXI_DATA_WIDTH-1 : 0] fwd_tdata_i  ,
-input  wire                        fwd_tvalid_i ,
-output wire                        fwd_tready_o ,
-input  wire [AXI_USER_WIDTH-1 : 0] fwd_tuser_i  ,
-// APB-M interface
-output wire [APB_ADDR_WIDTH-1 : 0] paddr_o      ,
-output wire [APB_DATA_WIDTH-1 : 0] pwdata_o     ,
-input  wire [APB_DATA_WIDTH-1 : 0] prdata_i     ,
-output wire                        psel_o       ,
-output wire                        pwrite_o     ,
-output wire                        penable_o    ,
-input  wire                        pready_i     ,
-input  wire                        pslverr_i
+    // System channel
+    input  wire                        clk_i        ,
+    input  wire                        rst_n_i      ,
+    // AXI-Stream BWD interface
+    output wire [AXI_DATA_WIDTH-1 : 0] bwd_tdata_o  ,
+    output wire                        bwd_tvalid_o ,
+    input  wire                        bwd_tready_i ,
+    output wire                        bwd_tuser_o  ,
+    // AXI-Stream FWD interface
+    input  wire [AXI_DATA_WIDTH-1 : 0] fwd_tdata_i  ,
+    input  wire                        fwd_tvalid_i ,
+    output wire                        fwd_tready_o ,
+    input  wire [AXI_USER_WIDTH-1 : 0] fwd_tuser_i  ,
+    // APB-M interface
+    output wire [APB_ADDR_WIDTH-1 : 0] paddr_o      ,
+    output wire [APB_DATA_WIDTH-1 : 0] pwdata_o     ,
+    input  wire [APB_DATA_WIDTH-1 : 0] prdata_i     ,
+    output wire                        psel_o       ,
+    output wire                        pwrite_o     ,
+    output wire                        penable_o    ,
+    input  wire                        pready_i     ,
+    input  wire                        pslverr_i
 );
 
 // *******************************************************************

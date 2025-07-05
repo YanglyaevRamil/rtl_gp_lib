@@ -20,17 +20,17 @@ module gp_fifo_sync #(
     parameter FIFO_DEPTH =  8,
     parameter DATA_WIDTH = 32
 )(
-// System channel
-input  wire                    clk_i      ,
-input  wire                    rst_n_i    ,
-// Write data channel
-output wire                    wr_ready_o ,
-input  wire                    wr_valid_i ,
-input  wire [DATA_WIDTH-1 : 0] wr_data_i  ,
-// Read data channel
-input  wire                    rd_ready_i ,
-output wire                    rd_valid_o ,
-output wire [DATA_WIDTH-1 : 0] rd_data_o  
+    // System channel
+    input  wire                    clk_i      ,
+    input  wire                    rst_n_i    ,
+    // Write data channel
+    output wire                    wr_ready_o ,
+    input  wire                    wr_valid_i ,
+    input  wire [DATA_WIDTH-1 : 0] wr_data_i  ,
+    // Read data channel
+    input  wire                    rd_ready_i ,
+    output wire                    rd_valid_o ,
+    output wire [DATA_WIDTH-1 : 0] rd_data_o  
 );
 
 // *******************************************************************
